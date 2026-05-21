@@ -94,14 +94,7 @@ def get_law():
 @app.route("/api/motivation")
 def get_motivation():
     return jsonify(MOTIVATIONS[date.today().weekday()])
-
-if __name__ == "__main__":
-    total = sum(len(v) for v in LAWS.values())
-    print("\n" + "="*50)
-    print("  🏛️  HỌC LUẬT MỖI NGÀY")
-    print(f"  📚 Tổng số điều luật: {total}")
-    print("  Mở trình duyệt: http://localhost:5000")
-    print("="*50 + "\n")
+  
 if __name__ == "__main__":
     import os
     port = int(os.environ.get("PORT", 5000))
